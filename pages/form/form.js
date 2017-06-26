@@ -1,20 +1,53 @@
-// form.js
-Page({
+// /pages/form/form.js
+const AV = require('../../utils/av-weapp-min.js');
+const FML = require('../../model/fml.js');
 
+var app = getApp()
+
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-  
+    loading: false,
+    plain: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  fmlSubmit: function (e) {
+    this.setData({
+      loading: !this.data.loading
+    })
+    var nickName = e.detail.value.nickName
+    var story = e.detail.value.story
+
+    var acl = new AV.ACL();
+    acl.setPublicReadAccess(true);
+    acl.setPublicWriteAccess(true);
+    console.log(nickName)
+    console.log(story)
+    setTimeout(function () {
+      new FML({
+        nickName: nickName,
+        story: story,
+        upvote: 0
+      }).setACL(acl).save().catch(console.error);
+      wx.reLaunch({
+        url: '/pages/index/index?FML=1'
+      });
+    }, 2000);
   },
 
+  onLoad: function () {
+    console.log('onLoad')
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,14 +1,30 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "/pages/form/f",
-    "/pages/form/form"
+    "pages/form/form"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "FML stories",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+
+  "tabBar": {
+    "backgroundColor": "#FFFFFE",
+    "borderStyle": "#D3D3D3",
+    "selectedColor": "#D03232",
+    "color": "#131313",
+  "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Feed"
+      },
+      {
+        "pagePath": "pages/form/form",
+        "text": "Submit a story"
+      }
+    ]
   }
 }

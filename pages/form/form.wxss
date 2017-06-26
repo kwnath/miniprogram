@@ -1,0 +1,37 @@
+/* /pages/form/form.wxss */
+.body {
+  font-family: 'Avenir', sans-serif;
+  font-weight: lighter;
+  margin-top: 10%;
+}
+
+.text-center {
+  text-align: center;
+  align-items: center;
+  padding-top: 10rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 100%;
+  background-size: "cover";
+}
+
+.button-hover {
+    color: blue;
+}
+
+.form {
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 6rpx;
+  margin-bottom: 10px;
+  width: 80%;
+  padding: 10px;
+}
+
+.btn-primary {
+  width: 40%;
+}

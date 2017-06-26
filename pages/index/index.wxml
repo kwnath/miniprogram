@@ -1,10 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<text class="center">Some of the weirdest stories</text>
+  <block wx:for="{{stories}}" wx:for-item="fml" wx:key="objectId">
+   <view class="card">
+    <view class="card-description">
+     <view class="quote">
+     {{fml.nickName}} : {{fml.story}}
+      <view class="fml-upvote">
+        <text class="counter">{{fml.upvote}} </text>
+        <image class="emoji-logo" src="../image/emoji-joy.png" bindtap="increment" id="{{fml.objectId}}"></image>  
+     </view>
+     </view>
+    </view>
+   </view>
+  </block>
+

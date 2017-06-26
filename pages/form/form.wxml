@@ -1,2 +1,13 @@
-<!--form.wxml-->
-<text>form.wxml</text>
+<!--/pages/form/form.wxml-->
+<view class="text-center body">
+  <form bindsubmit="fmlSubmit">
+    <view style="font-size: 20pt;">Submit a FML</view>
+    <view class ="form">
+<textarea placeholder="Name" value="{{userInfo.nickName}}" name="nickName" auto-height />
+<textarea name="story" placeholder="Enter text here" maxlength="300" />
+    </view>
+    <button class="btn-primary" type="normal" form-type="submit" loading="{{loading}}" plain="{{plain}}" hover-class="button-hover">Send</button>
+  </form>
+ </view>
+
+ 

@@ -5,17 +5,50 @@
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.emoji-logo {
+  width:13px;
+  height:13px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.fml-upvote {
+  text-align: right;
 }
 
-.usermotto {
-  margin-top: 200px;
+.center {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: center;
+  padding: 20px;
+  background-color: #353535;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.quote {
+  padding-top: 20px;
+  height: 100%;
+  text-align: left;
+}
+
+.card {
+  display: flex;
+  min-height: 55px;
+  min-width: 335px;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 2px;
+  border-left: 2px solid #353535;
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1); 
+}
+
+.card-description {
+  padding: 0 15px;
+  width: 100%;
+  color: black;
+  font-size: 27rpx;
+  line-height: 15px;
 }
